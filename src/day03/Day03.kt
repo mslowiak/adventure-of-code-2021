@@ -48,7 +48,7 @@ fun main() {
     }
 
     fun searchForScrubberRating(lineLength: Int, input: List<String>): String {
-        return countRating(input, lineLength, '1', '0')
+        return countRating(input, lineLength, '0', '1')
     }
 
     fun part2(input: List<String>): Int {
