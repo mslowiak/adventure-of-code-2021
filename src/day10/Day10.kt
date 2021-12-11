@@ -87,10 +87,10 @@ fun main() {
         return corruptedBrackets.keys.sumOf { corruptedBrackets[it]!! * pointsPerBracket[it]!! }
     }
 
-    val matchingClosingBrackets = mapOf<Char, Char>(
-            Pair('(', ')')
-            Pair('[', ']')
-            Pair('{', '}')
+    val matchingClosingBrackets = mapOf(
+            Pair('(', ')'),
+            Pair('[', ']'),
+            Pair('{', '}'),
             Pair('<', '>')
     )
 
@@ -106,7 +106,7 @@ fun main() {
         while (!stack.isEmpty()) {
             val openBracket = stack.pop()
             val closingBracket = matchingClosingBrackets[openBracket]
-            listOfChars.add(closingBracket)
+            listOfChars.add(closingBracket!!)
         }
         return listOfChars
     }
